@@ -48,7 +48,7 @@ export class resturantService{
             updatedresturant.desc = desc;
         }
         if(genre){
-            updatedresturant.genre = desc;
+            updatedresturant.genre = genre;
         }
         if(price){
             updatedresturant.price = price;
@@ -75,6 +75,8 @@ export class resturantService{
         }
         return resturant;
     }
+
+    
 
     
 
