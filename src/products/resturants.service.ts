@@ -48,7 +48,7 @@ export class resturantService{
             updatedresturant.desc = desc;
         }
         if(genre){
-            updatedresturant.genre = desc;
+            updatedresturant.genre = genre;
         }
         if(price){
             updatedresturant.price = price;
@@ -58,8 +58,8 @@ export class resturantService{
 
 
     async deleteresturant(resturantID: string){
-        const result = await this.resturantModel.deleteOne({_id: resturantID}).exec;
-        if (result.length ===0){
+        const result = await this.resturantModel.deleteOne({_id: resturantID}).exec();
+        if (result.deletedCount ===0){
             throw new NotFoundException('could not find');
         }
     }
@@ -75,6 +75,8 @@ export class resturantService{
         }
         return resturant;
     }
+
+    
 
     
 
